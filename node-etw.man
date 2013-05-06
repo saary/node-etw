@@ -1,0 +1,31 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+  <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+    <events xmlns="http://schemas.microsoft.com/win/2004/08/events">
+      <provider name="NodeEtwProvider" guid="{10535c9f-bf2e-4a80-8410-ebbeba2c7400}" symbol="NodeEtwProvider">
+        <events>
+          <event value="1" symbol="LogEvents_LogErrorEvent" template="tid_1" level="win:Error" message="$(string.LogEvents_LogErrorEvent)" />
+          <event value="2" symbol="LogEvents_LogWarningEvent" template="tid_1" level="win:Warning" message="$(string.LogEvents_LogWarningEvent)" />
+          <event value="3" symbol="LogEvents_LogInfoEvent" template="tid_1" level="win:Informational" message="$(string.LogEvents_LogInfoEvent)" />
+          <event value="4" symbol="LogEvents_LogVerboseEvent" template="tid_1" level="win:Verbose" message="$(string.LogEvents_LogVerboseEvent)" />
+          <event value="5" symbol="LogEvents_LogDebugEvent" template="tid_1" level="win:Verbose" message="$(string.LogEvents_LogDebugEvent)" />
+        </events>
+        <templates>
+          <template tid="tid_1">
+            <data name="message" inType="win:AnsiString" />
+          </template>
+        </templates>
+      </provider>
+    </events>
+  </instrumentation>
+  <localization>
+    <resources culture="en-US">
+    <stringTable>
+      <string id="LogEvents_LogDebugEvent" value= "%1" />
+      <string id="LogEvents_LogVerboseEvent" value= "%1" />
+      <string id="LogEvents_LogInfoEvent" value= "%1" />
+      <string id="LogEvents_LogWarningEvent" value= "%1" />
+      <string id="LogEvents_LogErrorEvent" value= "%1" />
+    </stringTable>
+    </resources>
+  </localization>
+</instrumentationManifest>

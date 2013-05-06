@@ -1,0 +1,28 @@
+{
+  "name": "node-etw",
+  "version": "0.0.2",
+  "description": "Event Tracing for Windows (ETW) logger for node",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "node-gyp rebuild"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/saary/node-etw.git"
+  },
+  "keywords": [
+    "etw",
+    "logger",
+    "console",
+    "event",
+    "tracing",
+    "windows",
+    "trace"
+  ],
+  "author": "Saar Yahalom",
+  "license": "MIT",
+  "gypfile": true,
+  "readmeFilename": "README.md",
+  "gitHead": "13b52b140f823bcaee7e29ec02382e878c3f730e"
+}
